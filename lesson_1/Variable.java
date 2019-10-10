@@ -10,12 +10,12 @@ class Variable {
 		boolean isPortable = true;
 
 		System.out.println("bitCapacity: " + bitCapacity + "\n" 
-							+ "coresQuantity: " + coresQuantity + "\n"
-							+ "ramSize: " + ramSize + "\n" 
-							+ "hddSize: " + hddSize + "\n"
-							+ "cost: " + cost + "\n"
-							+ "clockFrequency: " + clockFrequency + "\n"
-							+ "type: " + type + "\n"
-							+ "isPortable: " + isPortable + "\n" );
+			+ "coresQuantity: " + coresQuantity + "\n"
+			+ "ramSize: " + ramSize + "\n" 
+			+ "hddSize: " + hddSize + "\n"
+			+ "cost: " + cost + "\n"
+			+ "clockFrequency: " + clockFrequency + "\n"
+			+ "type: " + type + "\n"
+			+ "isPortable: " + isPortable + "\n" );
 	}
 }
