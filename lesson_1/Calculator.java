@@ -1,27 +1,26 @@
 class Calculator {
 	public static void main(String[] args) {
-		boolean exit = false;
-		char choice = '%';		
+		char mathOperation = '*';		
 		int firstNumber = 20;
 		int secondNumber = 4;
-		int resultingNumber = 0; 
+		int result = 0; 
 		
-		if (choice == '+') {
-			resultingNumber = firstNumber + secondNumber;
-		} else if (choice == '-') {
-			resultingNumber = firstNumber - secondNumber;
-		} else if (choice == '*') {
-			resultingNumber = firstNumber * secondNumber;
-		} else if (choice == '/') {
-			resultingNumber = firstNumber / secondNumber;
-		} else if (choice == '^') {
-			resultingNumber = 1;
+		if (mathOperation == '+') {
+			result = firstNumber + secondNumber;
+		} else if (mathOperation == '-') {
+			result = firstNumber - secondNumber;
+		} else if (mathOperation == '*') {
+			result = firstNumber * secondNumber;
+		} else if (mathOperation == '/') {
+			result = firstNumber / secondNumber;
+		} else if (mathOperation == '^') {
+			result = 1;
 			for (int i = 0; i < secondNumber; i++) {
-				resultingNumber *= firstNumber;
+				result *= firstNumber;
 			}
-		} else if (choice == '%') {
-			resultingNumber = firstNumber % secondNumber;
+		} else if (mathOperation == '%') {
+			result = firstNumber % secondNumber;
 		}
-		System.out.println("Result: " + resultingNumber + "\n");	
+		System.out.println("Result: " + result);	
 	}
 }
