@@ -1,43 +1,45 @@
 class Calculator {
-	private static final String RESULT_STRING = "Result: ";
-	private int result = -1;
-	
-	public void doOperation(int firstNumber, int secondNumber, char mathOperation) {
+	private int result = 0;
+		
+	public int calculate(int firstNumber, int secondNumber, char mathOperation) {
 		switch(mathOperation) {
-				case '+': addition(firstNumber, secondNumber); break;
-				case '-': substraction(firstNumber, secondNumber); break;
-				case '*': multiplication(firstNumber, secondNumber); break;
-				case '/': division(firstNumber, secondNumber); break;
-				case '^': exponentiation(firstNumber, secondNumber); break;
-				case '%': divisionByReminder(firstNumber, secondNumber); break;
-				default: System.out.println("Oops! Invalid math operation..." + "\n");
-			}
+			case '+': result = addition(firstNumber, secondNumber); break; 
+			case '-': result = substraction(firstNumber, secondNumber); break;
+			case '*': result = multiplication(firstNumber, secondNumber); break;
+			case '/': result = division(firstNumber, secondNumber); break;
+			case '^': result = exponentiation(firstNumber, secondNumber); break; 
+			case '%': result = divisionByReminder(firstNumber, secondNumber); break;
+			default: System.out.println("Oops! Invalid math operation..." + "\n");
+				return -1;
+		}
+		return result;
 	}
-	private void addition(int firstNumber, int secondNumber) {
-		result = firstNumber + secondNumber;
-		System.out.println(RESULT_STRING + result);
+
+	private int addition(int firstNumber, int secondNumber) {
+		return firstNumber + secondNumber;
 	}
-	private void substraction(int firstNumber, int secondNumber) {
-		result = firstNumber - secondNumber;
-		System.out.println(RESULT_STRING + result);
+
+	private int substraction(int firstNumber, int secondNumber) {
+		return firstNumber - secondNumber;
 	}
-	private void multiplication(int firstNumber, int secondNumber) {
-		result = firstNumber * secondNumber;
-		System.out.println(RESULT_STRING + result);
+
+	private int multiplication(int firstNumber, int secondNumber) {
+		return firstNumber * secondNumber;
 	}
-	private void division(int firstNumber, int secondNumber) {
-		result = firstNumber / secondNumber;
-		System.out.println(RESULT_STRING + result);
+
+	private int division(int firstNumber, int secondNumber) {
+		return firstNumber / secondNumber;
 	}
-	private void exponentiation(int firstNumber, int secondNumber) {
+
+	private int exponentiation(int firstNumber, int secondNumber) {
 		result = 1;
 		for (int i = 0; i < secondNumber; i++) {
 			result *= firstNumber;
 		}
-		System.out.println(RESULT_STRING + result);
+		return result;
 	}
-	private void divisionByReminder(int firstNumber, int secondNumber) {
-		result = firstNumber % secondNumber;
-		System.out.println(RESULT_STRING + result);
+
+	private int divisionByReminder(int firstNumber, int secondNumber) {
+		return firstNumber % secondNumber;
 	}
 }

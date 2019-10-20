@@ -6,6 +6,7 @@ class CalculatorTest {
 		String choice = "";
 		int firstNumber = 0;
 		int secondNumber = 0;
+		int result = 0;
 		char mathOperation = ' ';
 
 		do {
@@ -15,7 +16,8 @@ class CalculatorTest {
 			mathOperation = scanner.next().charAt(0);
 			System.out.print("Type the second number: ");
 			secondNumber = scanner.nextInt();
-			calculator.doOperation(firstNumber, secondNumber, mathOperation);
+			result = calculator.calculate(firstNumber, secondNumber, mathOperation);
+			System.out.println("Result: " + result);
 			do {
 				System.out.print("Do you want to continue? [yes / no] - ");
 				choice = scanner.nextLine();
