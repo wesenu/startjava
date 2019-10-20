@@ -15,21 +15,11 @@ class CalculatorTest {
 			mathOperation = scanner.next().charAt(0);
 			System.out.print("Type the second number: ");
 			secondNumber = scanner.nextInt();
-			
-			switch(mathOperation) {
-				case '+': calculator.addition(firstNumber, secondNumber); break;
-				case '-': calculator.substraction(firstNumber, secondNumber); break;
-				case '*': calculator.multiplication(firstNumber, secondNumber); break;
-				case '/': calculator.division(firstNumber, secondNumber); break;
-				case '^': calculator.exponentiation(firstNumber, secondNumber); break;
-				case '%': calculator.divisionByReminder(firstNumber, secondNumber); break;
-				default: System.out.println("Oops! Invalid math operation..." + "\n");
-			}
-
+			calculator.doOperation(firstNumber, secondNumber, mathOperation);
 			do {
 				System.out.print("Do you want to continue? [yes / no] - ");
 				choice = scanner.nextLine();
-			} while ( !("no".equals(choice) || "yes".equals(choice)) );
+			} while (!"no".equals(choice) && !"yes".equals(choice));
 		} while (!"no".equals(choice));
 
 	}
