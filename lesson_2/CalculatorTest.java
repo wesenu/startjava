@@ -2,12 +2,13 @@ import java.util.Scanner;
 class CalculatorTest {
 	public static void main(String[] args) {
 		Calculator calculator = new Calculator();
+		
 		Scanner scanner = new Scanner(System.in);
-		String choice = "";
-		int firstNumber = 0;
-		int secondNumber = 0;
-		int result = 0;
-		char mathOperation = ' ';
+		String choice;
+		int firstNumber;
+		int secondNumber;
+		int result;
+		char mathOperation;
 
 		do {
 			System.out.print("\n" + "Type the first unmber: ");
@@ -23,6 +24,5 @@ class CalculatorTest {
 				choice = scanner.nextLine();
 			} while (!"no".equals(choice) && !"yes".equals(choice));
 		} while (!"no".equals(choice));
-
 	}
 }
