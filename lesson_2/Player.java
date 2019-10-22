@@ -1,5 +1,5 @@
 class Player {
-	private int guessNumber;
+	private int number;
 	private String name;
 
 	Player(String name) {
@@ -7,11 +7,11 @@ class Player {
 	}
 
 	public int getNumber() {
-		return guessNumber;
+		return number;
 	}
 
-	public void setNumber(int guessNumber) {
-		this.guessNumber = guessNumber;
+	public void setNumber(int number) {
+		this.number = number;
 	}
 
 	public String getName() {
