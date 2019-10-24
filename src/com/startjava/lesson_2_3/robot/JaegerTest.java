@@ -1,3 +1,5 @@
+package com.startjava.lesson_2_3.robot;
+
 class JaegerTest {
 	public static void main(String[] args) {
 		Jaeger coyoteTango = new Jaeger("Coyote Tango", "Mark-1", "USA", 85.34f, 2.312f, 5, 7, 4);		

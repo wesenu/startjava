@@ -1,3 +1,5 @@
+package com.startjava.lesson_2_3.robot;
+
 public class Jaeger {
 	private String modelName;
 	private String mark;
@@ -38,7 +40,7 @@ public class Jaeger {
 		this.speed = speed;
 		this.strength = strength;
 		mark = "unknown";
-		origin = "unknown"
+		origin = "unknown";
 		armor = 0;
 	}
 
