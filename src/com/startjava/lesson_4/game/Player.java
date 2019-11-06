@@ -8,6 +8,7 @@ public class Player {
 
     public Player(String name) {
         this.name = name;
+        Arrays.fill(numbers, -1);
     }
 
     public int[] getNumbers(int length) {
@@ -22,8 +23,8 @@ public class Player {
         numbers[position] = number;
     }
 
-    public void clearNumbers() {
-        Arrays.fill(numbers, -1);
+    public void clearNumbers(int position) {
+        Arrays.fill(numbers, 0, position, -1);
     }
 
     public String getName() {
