@@ -15,19 +15,10 @@ public class GuessNumber {
         this.playerTwo = playerTwo;
     }
 
-    private void init() {
-        isWin = false;
-        if (attempt != 0) {
-            playerOne.clearNumbers(attempt);
-            playerTwo.clearNumbers(attempt);
-            attempt = 0;
-        }
-    }
-
     public void startGame() {
         init();
         guessNumber = generateGuessNumber();
-        System.out.printf("\nThe computer has made up some guessNumber from 0 to 100, the game is started. (%d)\n\n", guessNumber);
+        System.out.printf("\nThe computer has made up some guessNumber from 0 to 100, the game is started.\n\n");
 
         for (attempt = 0; attempt < 10; attempt++) {
             System.out.printf("%s is trying to guess the guessNumber! The guessNumber is... ", playerOne.getName());
@@ -52,6 +43,15 @@ public class GuessNumber {
         }
     }
 
+    private void init() {
+        isWin = false;
+        if (attempt != 0) {
+            playerOne.clearNumbers(attempt);
+            playerTwo.clearNumbers(attempt);
+            attempt = 0;
+        }
+    }
+
     private int generateGuessNumber() {
         return (int) (Math.random() * 101);
     }
@@ -62,7 +62,9 @@ public class GuessNumber {
             isWin = true;
             return true;
         } else {
-            System.out.printf("And %d is false... %s may be lucky next time \n\n", player.getNumber(attempt), player.getName());
+            String hint = player.getNumber(attempt) > guessNumber ? "higher" : "less";
+            System.out.printf("And %d is false... %s may be lucky next time. This number is %s than the guessed number."
+                + "\n\n", player.getNumber(attempt), player.getName(), hint);
             return false;
         }
     }
